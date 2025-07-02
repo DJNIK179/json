@@ -1,7 +1,7 @@
 {
-    "same": true,
-    "tabWidth": 2,
-    "singleQuote": true,
-    "prinWidth": 80,
-    "trailingCOmma": "all"
+  "same": true,
+  "tabWidth": 2,
+  "singleQuote": true,
+  "prinWidth": 80,
+  "trailingCOmma": "all"
 }
