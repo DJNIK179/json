@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
 import 'swiper/css';
 
-export const useInsightSLider = () => {
+export const useInsightSlider = () => {
   new Swiper('.insight__slider', {
     slidesPerView: 'auto',
     spaceBetween: 32,

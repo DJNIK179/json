@@ -1,7 +1,7 @@
 export const useBurger = () => {
   const burgerBtn = document.querySelector('[data-burger="btn"]');
-  const overlay = document.querySelector('[data-burger="overlay"]');
   const burgerMenu = document.querySelector('[data-burger="menu"]');
+  const overlay = document.querySelector('[data-burger="overlay"]');
   const body = document.body;
 
   const closeBurgerMenu = () => {

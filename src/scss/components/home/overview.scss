@@ -20,10 +20,10 @@
 
   &__descr {
     margin-bottom: 80px;
+    max-width: 660px;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 1.5;
-    color: #7e8492;
+    line-height: 150%;
+    color: var(--neutral-color-150);
 
     @include tablet {
       margin-bottom: 60px;
@@ -40,7 +40,7 @@
     flex-wrap: wrap;
 
     @include tablet {
-      gap: 48px;
+      gap: 40px;
       flex-direction: column;
       align-items: center;
     }
@@ -61,8 +61,7 @@
     &-title {
       max-width: 262px;
       font-weight: 600;
-      font-size: 32px;
-      line-height: 1.3125;
+      line-height: 131%;
       letter-spacing: -0.03em;
       color: #fff;
 
@@ -73,8 +72,8 @@
 
     &-descr {
       font-weight: 500;
-      line-height: 1.625;
-      color: #7e8492;
+      line-height: 162%;
+      color: var(--neutral-color-150);
     }
   }
 

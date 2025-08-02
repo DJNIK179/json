@@ -1,6 +1,6 @@
-@import './mixin';
+@import './mixins';
 @import './base';
-@import './global';
+@import './globals';
 
 // components
 @import './components/header';
@@ -8,6 +8,7 @@
 @import './components/home/overview';
 @import './components/home/features';
 @import './components/home/strength';
-@import './components/home/partners';
+@import './components/partners';
 @import './components/home/insight';
 @import './components/home/testimonials';
+@import './components/footer';

@@ -26,6 +26,7 @@
 
     @include mobile {
       gap: 42px;
+      margin-bottom: 50px;
     }
   }
 
@@ -44,6 +45,10 @@
       gap: 72px;
       margin-right: 72px;
 
+      @include tablet {
+        margin-right: 0;
+      }
+
       &::after {
         content: '';
         display: inline-block;
@@ -58,18 +63,17 @@
     }
 
     &-text {
-      max-width: 175px;
       font-weight: 500;
-      font-size: 18px;
       line-height: 178%;
       color: var(--neutral-color-150);
     }
 
     &-num {
       display: block;
+      margin-bottom: 8px;
       font-weight: 600;
       font-size: 64px;
-      line-height: 1.2;
+      line-height: 120%;
       color: var(--neutral-color-100);
 
       @include tablet {
@@ -79,18 +83,16 @@
       @include mobile {
         font-size: 48px;
       }
+
+      @include small-mobile {
+        font-size: 42px;
+      }
     }
   }
 
   &__list,
   &__img {
     margin-bottom: 80px;
-  }
-
-  &__list {
-    @include mobile {
-      margin-bottom: 50px;
-    }
   }
 
   &__img {
@@ -110,26 +112,22 @@
       gap: 20px;
       flex-direction: column;
     }
+  }
 
-    &-title {
-      max-width: 772px;
-      font-weight: 600;
-      font-size: 56px;
-      line-height: 1.2;
-      letter-spacing: -0.04em;
-      color: var(--neutral-color-100);
-    }
+  &__title {
+    font-weight: 600;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+  }
 
-    &-descr {
-      max-width: 421px;
-      font-weight: 500;
-      font-size: 18px;
-      line-height: 178%;
-      color: var(--neutral-color-150);
+  &__descr {
+    max-width: 421px;
+    font-weight: 500;
+    line-height: 178%;
+    color: var(--neutral-color-150);
 
-      @include tablet {
-        max-width: 700px;
-      }
+    @include tablet {
+      max-width: 700px;
     }
   }
 }

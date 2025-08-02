@@ -10,13 +10,14 @@
     margin-bottom: 48px;
 
     @include tablet {
-      gap: 10px;
+      gap: 24px;
       flex-direction: column;
       text-align: center;
     }
 
     @include mobile {
       gap: 12px;
+      margin-bottom: 40px;
     }
   }
 
@@ -54,17 +55,13 @@
     }
   }
 
-  &__slider {
-    max-width: 898px;
-  }
-
   &__slider-wrapper {
     &::before {
       content: '';
       display: inline-block;
       width: 115px;
       height: 77px;
-      background: url(../icons/quotes-icon.svg);
+      background: url('../assets/icons/quotes-icon.svg');
       transform: translateY(15px);
 
       @include mini-desktop {
@@ -75,6 +72,10 @@
         display: none;
       }
     }
+  }
+
+  &__slider {
+    max-width: 898px;
   }
 
   &__comment {
@@ -131,7 +132,12 @@
       background-color var(--transition),
       border-color var(--transition);
 
-    svg path {
+    @include small-mobile {
+      width: 40px;
+      height: 40px;
+    }
+
+    & svg path {
       transition: fill var(--transition);
     }
 
@@ -144,7 +150,7 @@
       }
     }
 
-    &--prev {
+    &--next {
       transform: rotate(-180deg);
     }
   }

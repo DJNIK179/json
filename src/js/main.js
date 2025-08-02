@@ -1,15 +1,14 @@
-import '../scss/main.scss';
+import '/scss/main.scss';
 
 // components
-
-import { useTheme } from './components/theme';
+import { useTheme } from './components/theme.js';
 import { useBurger } from './components/burger.js';
 import {
-  useInsightSLider,
+  useInsightSlider,
   useTestimonialsSlider,
 } from './components/home/slider.js';
 
 useTheme();
 useBurger();
-useInsightSLider();
+useInsightSlider();
 useTestimonialsSlider();

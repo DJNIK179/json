@@ -1,12 +1,11 @@
 .header {
   padding: 26px 0 22px;
-  background-color: transparent;
 
   @include mobile {
     padding: 22px 0 18px;
   }
 
-  &__inner {
+  &__container {
     @include flex-all-between;
   }
 
@@ -32,7 +31,7 @@
   }
 
   &__right {
-    @include flex-all-between;
+    @include flex-align-center;
     gap: 111px;
 
     @include tablet {
@@ -69,10 +68,9 @@
     border-radius: 13px;
     width: 63px;
     height: 27px;
-    background: var(--neutral-color-130);
+    background-color: var(--neutral-color-130);
     transform: translateY(8px);
-    transition: var(--transition);
-    cursor: pointer;
+    transition: background-color var(--transition);
 
     &::before {
       content: '';
@@ -83,20 +81,18 @@
       border-radius: 50%;
       width: 23px;
       height: 23px;
-      background: var(--neutral-color-120);
-      transition: var(--transition);
-    }
-
-    &-checkbox {
-      appearance: none;
+      background-color: var(--neutral-color-120);
+      transition:
+        left var(--transition),
+        background-color var(--transition);
     }
 
     &-text {
       position: absolute;
-      top: -22px;
+      top: -24px;
       left: 50%;
       font-weight: 600;
-      line-height: 1.5;
+      line-height: 150%;
       text-align: center;
       color: var(--neutral-color-140);
       transform: translateX(-50%);
@@ -107,20 +103,24 @@
       }
     }
 
+    &-checkbox {
+      appearance: none;
+    }
+
     &:has(&-checkbox:checked) {
       background-color: var(--neutral-color-60);
 
       &::before {
         left: 38px;
-        background-color: var(--primary-color-30);
+        background-color: var(--primary-color-50);
       }
     }
   }
 }
 
 .nav {
-  &__item {
-    @include flex-all-between;
+  &__list {
+    @include flex-align-center;
     gap: 32px;
 
     @include small-tablet {
@@ -136,7 +136,7 @@
   &__link {
     position: relative;
     font-weight: 500;
-    line-height: 1.625;
+    line-height: 162%;
     color: var(--neutral-color-100);
 
     @include small-tablet {

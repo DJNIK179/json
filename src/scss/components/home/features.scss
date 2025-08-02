@@ -1,5 +1,5 @@
 .features {
-  padding: 100px 0 94px;
+  padding: 160px 0 94px;
 
   @include mobile {
     padding: 60px 0 64px;
@@ -50,7 +50,8 @@
 
     &-title {
       font-weight: 600;
-      line-height: 1.5;
+      font-size: 16px;
+      line-height: 150%;
       color: #1d1e25;
     }
 
@@ -77,8 +78,8 @@
         margin-bottom: 6px;
         font-weight: 500;
         font-size: 10px;
-        line-height: 1.5;
-        color: #7e8492;
+        line-height: 150%;
+        color: var(--neutral-color-150);
       }
 
       &-price {
@@ -86,24 +87,23 @@
         gap: 12px;
         margin-bottom: 9px;
 
-        &-number {
+        &-num {
           font-weight: 700;
           font-size: 23px;
-          line-height: 1.2;
+          line-height: 120%;
           color: #1d1e25;
 
           @include mobile {
-            font-size: 17px;
+            font-size: 18px;
           }
         }
 
         &-proc {
           @include flex-align-center;
-          gap: 12px;
+          gap: 5px;
           font-weight: 500;
           font-size: 10px;
-          line-height: 1.5;
-          text-align: center;
+          line-height: 150%;
           color: #1d1e25;
         }
       }
@@ -111,7 +111,7 @@
       &-descr {
         font-weight: 400;
         font-size: 8px;
-        color: #7e8492;
+        color: var(--neutral-color-150);
       }
     }
   }
@@ -127,7 +127,6 @@
   &__title {
     margin-bottom: 24px;
     font-weight: 600;
-    line-height: 1.2;
     letter-spacing: -0.04em;
     color: var(--neutral-color-100);
 
@@ -138,19 +137,13 @@
 
   &__descr {
     margin-bottom: 40px;
-    max-width: 364px;
+    max-width: 360px;
     font-weight: 500;
-    font-size: 18px;
-    line-height: 1.77778;
-    color: #7e8492;
+    line-height: 178%;
+    color: var(--neutral-color-150);
 
     @include mini-desktop {
       max-width: 700px;
-    }
-
-    @include tablet {
-      margin-right: auto;
-      margin-left: auto;
     }
   }
 
@@ -180,7 +173,7 @@
       padding-right: 19px;
       width: 20px;
       height: 20px;
-      background: url('./assets/icons/features-list-item-icon.svg');
+      background: url('../assets/icons/features-tick-icon.svg');
     }
   }
 }
