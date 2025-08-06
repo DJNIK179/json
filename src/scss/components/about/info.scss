@@ -1,0 +1,37 @@
+.about {
+  &__info {
+    padding: 120px 0;
+    background: var(--neutral-color-100);
+
+    &-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 159px 32px;
+    }
+
+    &-item {
+      &:last-child {
+        transform: translateY(-244px);
+      }
+    }
+
+    &-descr {
+      max-width: 515px;
+    }
+
+    &-title {
+      font-weight: 600;
+      font-size: 40px;
+      line-height: 120%;
+      color: var(--neutral-color-10);
+      margin-bottom: 24px;
+    }
+
+    &-descr {
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 178%;
+      color: var(--neutral-color-150);
+    }
+  }
+}
