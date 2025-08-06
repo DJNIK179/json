@@ -17,14 +17,14 @@ export const useInsightSlider = () => {
 };
 
 export const useTestimonialsSlider = () => {
-  new Swiper('.testimonials__slider', {
+  new Swiper('.articles__slider', {
     modules: [Navigation],
     slidesPerView: 'auto',
     spaceBetween: 22,
     loop: true,
     navigation: {
-      prevEl: '.testimonials__btn--prev',
-      nextEl: '.testimonials__btn--next',
+      prevEl: '.articles__btn--prev',
+      nextEl: '.articles__btn--next',
     },
   });
 };

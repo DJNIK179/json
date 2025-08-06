@@ -6,27 +6,17 @@
     &-list {
       display: grid;
       grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(3, 1fr);
-      gap: 8px;
+      gap: 159px 32px;
     }
 
     &-item {
-      :first-child {
-        grid-row: span 2 / span 2;
+      &:last-child {
+        transform: translateY(-244px);
       }
-      :nth-child(2) {
-        grid-column-start: 1;
-        grid-row-start: 3;
-      }
-      :nth-child(3) {
-        grid-column-start: 2;
-        grid-row-start: 1;
-      }
-      :last-child {
-        grid-row: span 2 / span 2;
-        grid-column-start: 2;
-        grid-row-start: 2;
-      }
+    }
+
+    &-descr {
+      max-width: 515px;
     }
 
     &-title {
@@ -34,6 +24,7 @@
       font-size: 40px;
       line-height: 120%;
       color: var(--neutral-color-10);
+      margin-bottom: 24px;
     }
 
     &-descr {
