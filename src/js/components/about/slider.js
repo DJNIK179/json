@@ -8,6 +8,12 @@ export const useInsightSlider = () => {
     spaceBetween: 20,
     loop: true,
     centeredSlides: false,
+    breakpoints: {
+      1200: {
+        centeredSlides: false,
+        spaceBetween: -40,
+      },
+    },
   });
 };
 
