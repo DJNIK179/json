@@ -1,0 +1,48 @@
+.team {
+  padding: 105px 0 135px;
+}
+
+.hero {
+  &__title {
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 120%;
+    letter-spacing: -0.04em;
+    color: var(--neutral-color-100);
+    margin-bottom: 118px;
+    max-width: 959px;
+  }
+
+  &__subtitle {
+    max-width: 788px;
+    position: relative;
+  }
+
+  &__inner {
+    @include flex-all-between;
+  }
+
+  &__img {
+    position: relative;
+    &::before {
+        content: '';
+        position: absolute;
+        background-image: url('../assets/icons/team/team-hero-icon.svg');
+        width: 59px;
+        height: 59px;
+        display: inline-block;
+        left: 27%;
+        bottom: 27%;
+        transition: all 0.5s;
+    }
+
+    &:hover::before {
+        rotate: -180deg;
+    }
+  }
+}
+
+.text-p-subtitle::before {
+  width: 100%;
+  max-width: 75px;
+}
