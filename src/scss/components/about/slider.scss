@@ -14,16 +14,8 @@
       background-color: #fff;
       transform: translateX(-50%);
 
-      @include tablet {
+      @include mini-desktop {
         display: none;
-      }
-
-      @include small-mobile {
-        top: 80px;
-        left: 93%;
-        display: flex;
-        width: 50px;
-        height: 50px;
       }
     }
   }
@@ -32,7 +24,11 @@
     max-width: 582px;
 
     @include mini-desktop {
-      max-width: 482px;
+      max-width: 382px;
+    }
+
+    @include small-tablet {
+      max-height: 500px;
     }
 
     @include mobile {
@@ -65,21 +61,38 @@
       line-height: 150%;
       letter-spacing: -0.02em;
       color: var(--neutral-color-100);
+
+      @include small-tablet {
+        font-size: 20px;
+      }
+
+      @include mobile {
+        font-size: 18px;
+      }
     }
 
     &-descr {
       margin-top: 16px;
+      max-width: 332px;
       font-weight: 500;
       font-size: 20px;
       line-height: 150%;
       color: var(--neutral-color-150);
-      max-width: 332px;
+
+      @include small-tablet {
+        font-size: 14px;
+      }
     }
   }
 }
+
 .about {
   &__slidebar {
-    padding: 0 0 160px;
+    padding-bottom: 160px;
+
+    @include small-tablet {
+      padding-bottom: 50px;
+    }
   }
 
   &__article {

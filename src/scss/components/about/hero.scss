@@ -1,10 +1,15 @@
 .hero {
   padding: 90px 0 78px;
 
+  @include mobile {
+    padding: 50px 0;
+  }
+
   &__top {
     &::before {
       top: -20px;
     }
+
     &::after {
       bottom: -320px;
     }
@@ -47,19 +52,40 @@
     line-height: 120%;
     letter-spacing: -0.04em;
     color: var(--neutral-color-100);
+
+    @include mobile {
+      font-size: 52px;
+    }
   }
 
   &__subtitle {
     margin-top: 53px;
+
+    @include mobile {
+      margin-top: 20px;
+      font-size: 20px;
+    }
   }
 
   &__nav {
     margin-top: 128px;
+
+    @include small-mobile {
+      margin-top: 60px;
+    }
   }
 
   &__list {
     @include flex-align-center;
     gap: 46px;
+
+    @include small-tablet {
+      gap: 30px;
+    }
+
+    @include mobile {
+      flex-wrap: wrap;
+    }
   }
 
   &__link {
@@ -73,8 +99,8 @@
       font-size: 16px;
       line-height: 150%;
       text-decoration: underline;
-      text-decoration-skip-ink: none;
       color: var(--neutral-color-100);
+      text-decoration-skip-ink: none;
     }
 
     &:hover {
@@ -82,8 +108,8 @@
       font-size: 16px;
       line-height: 150%;
       text-decoration: underline;
-      text-decoration-skip-ink: none;
       color: var(--neutral-color-100);
+      text-decoration-skip-ink: none;
     }
   }
 }

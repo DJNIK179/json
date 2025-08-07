@@ -1,22 +1,42 @@
 .articles {
   padding: 160px 0;
 
+  @include small-tablet {
+    padding: 50px 0;
+  }
+
   &-slide {
     max-width: 415px;
+
+    @include small-tablet {
+      max-width: 350px;
+    }
+
+    @include mobile {
+      max-width: 250px
+    }
   }
 
   &__inner {
     @include flex-all-between;
     margin-bottom: 80px;
+
+    @include small-tablet {
+      margin-bottom: 40px;
+    }
+
+    @include mobile {
+      align-items: flex-end;
+    }
   }
 
   &__title {
+    margin-bottom: 24px;
     font-weight: 600;
     font-size: 56px;
     line-height: 120%;
     letter-spacing: -0.04em;
     color: var(--neutral-color-100);
-    margin-bottom: 24px;
   }
 
   &__descr {
@@ -24,6 +44,10 @@
     font-weight: 500;
     line-height: 178%;
     color: var(--neutral-color-150);
+
+    @include mobile {
+      max-width: 300px;
+    }
   }
 
   &__btns {
@@ -71,10 +95,16 @@
   }
 
   &__button {
+    margin-top: 24px;
     border: 1px solid var(--neutral-color-40);
     border-radius: 100px;
-    padding: 16px 45px; 
-    margin-top: 24px;
+    padding: 16px 45px;
+    
+    @include small-mobile {
+      margin-top: 10px;
+      padding: 10px 20px;
+      font-size: 14px;
+    }
   }
 }
 

@@ -1,21 +1,41 @@
 .team {
   padding: 105px 0 135px;
+
+  @include mobile {
+    padding: 50px 0 80px;
+  }
 }
 
 .hero {
   &__title {
+    margin-bottom: 118px;
+    max-width: 959px;
     font-weight: 700;
     font-size: 72px;
     line-height: 120%;
     letter-spacing: -0.04em;
     color: var(--neutral-color-100);
-    margin-bottom: 118px;
-    max-width: 959px;
+
+    @include small-tablet {
+      margin-bottom: 50px;
+    }
+
+    @include mobile {
+      font-size: 42px;
+    }
+
+    @include small-mobile {
+      margin-bottom: 20px;
+    }
   }
 
   &__subtitle {
-    max-width: 788px;
     position: relative;
+    max-width: 788px;
+
+    @include mobile {
+      font-size: 20px;
+    }
   }
 
   &__inner {
@@ -23,21 +43,30 @@
   }
 
   &__img {
-    position: relative;
-    &::before {
-        content: '';
-        position: absolute;
-        background-image: url('../assets/icons/team/team-hero-icon.svg');
-        width: 59px;
-        height: 59px;
-        display: inline-block;
-        left: 27%;
-        bottom: 27%;
-        transition: all 0.5s;
+    @include tablet {
+      display: none;
     }
 
-    &:hover::before {
-        rotate: -180deg;
+    &-icon {
+      &-light {
+        display: block;
+      }
+
+      &-dark {
+        display: none;
+      }
+    }
+  }
+
+  [data-theme='dark'] &__img {
+    &-icon {
+      &-light {
+        display: none;
+      }
+
+      &-dark {
+        display: block;
+      }
     }
   }
 }
